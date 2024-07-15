@@ -29,12 +29,12 @@ cas(me)^2:
   macro_right_min_dis: 7  # macro_min // 2
   macro_right_max_dis: 29
 
-  project_root: "./"
+  project_root: "/kaggle/working/AUW-GCN-test"
   feature_root: ~
-  segment_feat_root: "./features/cas(me)^2/feature_segment"
+  segment_feat_root: "/kaggle/working/AUW-GCN-test/features/cas(me)^2/feature_segment"
   model_save_root: ~
   output_dir_name: ~
-  anno_csv: "./info_csv/cas(me)_new.csv"
+  anno_csv: "/kaggle/working/AUW-GCN-test/info_csv/cas(me)_new.csv"
   num_workers: 2
   device: 'cuda:0'
 
