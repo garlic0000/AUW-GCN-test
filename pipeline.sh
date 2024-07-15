@@ -11,7 +11,7 @@ SUB_LIST=( casme_015 casme_016 casme_019 casme_020 casme_021 casme_022 casme_023
  casme_035 casme_036 casme_037 casme_038 casme_040 )
  # /kaggle/working/
  # OUTPUT="./output/casme"
-PATH = "/kaggle/working/AUW-GCN-test"
+AUW_GCN_PATH = "/kaggle/working/AUW-GCN-test"
 OUTPUT="/kaggle/working/output/casme"
 DATASET="cas(me)^2"
 
@@ -28,8 +28,8 @@ for i in ${SUB_LIST[@]}
 do     
     echo "************ Currently running subject: ${i} ************"
     # comment the line below if evaluating on available ckpts.
-    python $PATH/train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
-    python $PATH/eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
+    python $AUW_GCN_PATH/train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
+    python $AUW_GCN_PATH/eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
 done
 
 #output final metrics
