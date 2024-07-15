@@ -6,13 +6,14 @@ export CUDA_VISIBLE_DEVICES=0
 
 # for CASME
 
- SUB_LIST=( casme_015 casme_016 casme_019 casme_020 casme_021 casme_022 casme_023 casme_024 \
+SUB_LIST=( casme_015 casme_016 casme_019 casme_020 casme_021 casme_022 casme_023 casme_024 \
  casme_025 casme_026 casme_027 casme_029 casme_030 casme_031 casme_032 casme_033 casme_034 \
  casme_035 casme_036 casme_037 casme_038 casme_040 )
  # /kaggle/working/
  # OUTPUT="./output/casme"
- OUTPUT="/kaggle/working/output/casme"
- DATASET="cas(me)^2"
+PATH = "/kaggle/working/AUW-GCN-test"
+OUTPUT="/kaggle/working/output/casme"
+DATASET="cas(me)^2"
 
 # for SAMM
 
@@ -27,8 +28,8 @@ for i in ${SUB_LIST[@]}
 do     
     echo "************ Currently running subject: ${i} ************"
     # comment the line below if evaluating on available ckpts.
-    python train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
-    python eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
+    python $PATH/train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
+    python $PATH/eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
 done
 
 #output final metrics
