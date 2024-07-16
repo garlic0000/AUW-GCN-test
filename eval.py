@@ -34,7 +34,8 @@ if __name__ == '__main__':
     dataloader = torch.utils.data.DataLoader(dataset,
                                              batch_size=opt['batch_size'], 
                                              shuffle=False,
-                                             num_workers=8, 
+                                             # num_workers=8
+                                             num_workers=4,
                                              pin_memory=True, 
                                              drop_last=False)
     
