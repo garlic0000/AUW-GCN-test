@@ -33,4 +33,4 @@ do
 done
 
 #output final metrics
-python calc_final_score.py --output $OUTPUT
+python /kaggle/working/AUW-GCN-test/calc_final_score.py --output $OUTPUT
