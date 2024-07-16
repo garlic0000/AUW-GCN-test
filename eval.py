@@ -43,6 +43,7 @@ if __name__ == '__main__':
     device = opt['device'] if torch.cuda.is_available() else 'cpu'
     model = AUwGCN(opt)
     model = model.to(device)
+    print(device)
     
     # evaluate each ckpt's model and generate proposals
     # after generating proposals, NMS to reduce overlapped proposals

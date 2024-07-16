@@ -190,6 +190,7 @@ if __name__ == '__main__':
     device = opt['device'] if torch.cuda.is_available() else 'cpu'
     model = AUwGCN(opt)
     model = model.to(device)
+    print(device)
     
     
     # define dataset and dataloader
