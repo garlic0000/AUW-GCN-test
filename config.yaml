@@ -54,7 +54,7 @@ cas(me)^2:
   macro_apex_score_threshold: 0.5
 
   epochs: 100
-  batch_size: 128
+  batch_size: 64 #128
 
   verbose: False
 
